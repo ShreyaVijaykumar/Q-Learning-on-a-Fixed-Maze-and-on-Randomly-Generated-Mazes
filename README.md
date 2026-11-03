@@ -14,8 +14,6 @@ Built with Python, NumPy and Matplotlib only. No RL library and no dataset are u
 - [Part I: Fixed Maze](#part-i-fixed-maze)
 - [Part II: Random Mazes](#part-ii-random-mazes)
 - [Limitations](#limitations)
-- [Implemented vs. Future Work](#implemented-vs-future-work)
-- [References](#references)
 
 ---
 
@@ -211,24 +209,3 @@ This gives 3⁴ × 9 × 16 = 11,664 states.
 - **Experiment A mazes are fairly easy.** Most have the minimum possible optimal path of 18 steps.
 - **Q-learning and SARSA give the same result on the fixed maze,** because the traps are not next to the optimal path.
 - **Tabular methods do not scale** to large state spaces.
-
-## Implemented vs. Future Work
-
-| Implemented | Proposed (not implemented) |
-|---|---|
-| Fixed-maze environment with walls, traps, goal | Deep Q-Network (DQN) for larger or image-based mazes |
-| Tabular Q-learning with epsilon-greedy exploration | Larger view (e.g. 5×5) or full-maze observation |
-| SARSA comparison | Recurrent memory (LSTM) to remember dead ends |
-| Random maze generator with BFS solvability check | Perfect (spanning-tree) mazes with long corridors |
-| Experiment A: fresh agent per random maze | Moving obstacles, stochastic (slippery) movement |
-| Experiment B: local-observation agent on unseen mazes | Reward shaping, systematic hyper-parameter search |
-| Random baseline, greedy evaluation, learning curves | Larger grids, other algorithms (Double Q-learning, PPO), GUI |
-
-## References
-
-- Sutton, R. S. and Barto, A. G. (2018). *Reinforcement Learning: An Introduction* (2nd ed.). MIT Press.
-- Watkins, C. J. C. H. and Dayan, P. (1992). Q-learning. *Machine Learning*, 8, 279–292.
-- Harris, C. R. et al. (2020). Array programming with NumPy. *Nature*, 585, 357–362.
-- Hunter, J. D. (2007). Matplotlib: A 2D graphics environment. *Computing in Science & Engineering*, 9(3), 90–95.
-
-Code and documentation were prepared with assistance from Claude (Anthropic).
